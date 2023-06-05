@@ -1,33 +1,77 @@
- 
+# Day 2 Counting On You
+
+## Counting On You
+
+In this activity, you will show what you've learned about variables by making a custom counter.
+
+## Step 1
+
+The first thing you will need to do is to create a variable to be a counter. Then, set it to 0 when the code starts.
+
+```blocks
+let count = 0;
+```
+
+## Step 2
+
+Create an ``||player.on chat command||`` that will display the value of the counter using a ``||player.say||`` block. You can drag any ``||variables||`` you make into say blocks to show their value!
+
+```blocks
+let count = 0;
+player.onChat("counter", function () {
+    player.say(count)
+})
+```
+
+## Step 3
+
+Several different events are available for you in this activity! Select an event that you like, and when that event occurs, ``||variables.change||`` the count! (An example is provided in the hint.)
+
+```blocks
+let count = 0;
+mobs.onMobKilled(SHEEP, function(){
+    count += 1;
+})
+```
+
+## Step 4
+
+Pick at least 2 more events, and add code to change the counter in each. Don't forget you can use a negative number to decrease the counter!
 
 
-> Open this page at [https://codeninjassummercamps.github.io/day-2-counting-on-you/](https://codeninjassummercamps.github.io/day-2-counting-on-you/)
+## Step 5
 
-## Use as Extension
+Go ahead and try out your code and make sure everything is working. If it's not, look back at the hint on step  3 or ask a Sensei!
 
-This repository can be added as an **extension** in MakeCode.
+## Step 6
 
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/codeninjassummercamps/day-2-counting-on-you** and import
+Is all your code working? The hint has some examples of events you could have created!
 
-## Edit this project ![Build status badge](https://github.com/codeninjassummercamps/day-2-counting-on-you/workflows/MakeCode/badge.svg)
+```blocks
+let count = 0;
+mobs.onMobKilled(SHEEP, function(){
+    count += 1;
+})
+player.onTravelled(TravelMethod.walk, function(){
+    count += 2;
+})
+player.onDied(function(){
+    count += -10;
+})
+player.onItemInteracted(DIAMOND_SWORD, function(){
+    count += 3;
+})
+blocks.onBlockPlaced(GRASS, function(){
+    count += 5;
+})
+blocks.onBlockBroken(GRASS, function(){
+    count += -5;
+})
+player.onArrowShot(function(){
+    count += 100;
+})
+```
 
-To edit this repository in MakeCode.
+## Activity Complete!
 
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/codeninjassummercamps/day-2-counting-on-you** and click import
-
-## Blocks preview
-
-This image shows the blocks code from the last commit in master.
-This image may take a few minutes to refresh.
-
-![A rendered view of the blocks](https://github.com/codeninjassummercamps/day-2-counting-on-you/raw/master/.github/makecode/blocks.png)
-
-#### Metadata (used for search, rendering)
-
-* for PXT/arcade
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+You did it! You showed off what you know about variables (and events)!
