@@ -77,7 +77,7 @@ player.onArrowShot(function(){
 Can you figure out how to make an ``||player.on chat command||`` that will reset the counter back to 0?
 
 ```blocks
-player.onChatCommand("reset", function(){
+player.onChat("reset", function(){
     count = 0;
 })
 ```
