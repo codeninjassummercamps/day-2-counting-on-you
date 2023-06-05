@@ -72,6 +72,16 @@ player.onArrowShot(function(){
 })
 ```
 
+## Bonus!
+
+Can you figure out how to make an ``||player.on chat command||`` that will reset the counter back to 0?
+
+```blocks
+player.onChatCommand("reset", function(){
+    count = 0;
+})
+```
+
 ## Activity Complete!
 
 You did it! You showed off what you know about variables (and events)!
